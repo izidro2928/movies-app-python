@@ -1,0 +1,32 @@
+{% extends 'base_users.html' %}
+
+{% block content %}
+    <h1 class="h3 mb-3 text-center">LOGIN</h1>
+    <form action="{{url_for('users.login')}}" method="POST">
+        <div class="mb-3">
+            <label for="usernameid" class="form-label">Email</label>
+            <input type="email" class="form-control" name="username" id="usernameid">
+        </div>
+        <div class="mb-3">
+            <label for="passid" class="form-label">Password</label>
+            <input type="password" class="form-control" name="pass" id="passid">
+        </div>
+        <button class="btn btn-danger">Login</button>
+        <p class="pt-1">Don't have an account <a href="{{url_for('users.register')}}">Register</a></p>
+        
+        {% with messages = get_flashed_messages(with_categories=True)  %}
+            
+            {% if messages %}
+                
+                {% for category, message in messages  %}
+                    <div class="{{category}}">{{message}}</div>
+                {% endfor %}
+                    
+            {% endif %}
+                
+        {% endwith %}
+            
+            
+    </form>
+{% endblock content %}
+    

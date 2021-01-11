@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="{{url_for('users.static', filename='img/favicon.ico')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('users.static', filename='css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{url_for('users.static', filename='css/login.css')}}">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    <div class="container my-5">
+        <div class="row">
+            <div class="col col-sm-8 offset-sm-2 col-lg-4  offset-lg-4">
+                <div class="text-center">
+                    <a href="/">
+                        <img src="{{url_for('users.static', filename='img/login.png')}}" alt="login"
+                            class="img-fluid mb-3">
+                    </a>
+                </div>
+                <div class="form-login px-5 py-3">
+                    
+                    {% block content %}
+                        
+                    {% endblock content %}
+                        
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

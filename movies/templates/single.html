@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-6 offset-3 offset-md-0 col-md-3 mb-3">
+                <img src="{{pelicula.2}}" alt="{{pelicula.1}}" class="rounded mb-3 img-is-full">
+            </div>
+            <div class="col-md-5 text-center text-md-start">
+                <h1 class="h5">{{pelicula.1}} ({{pelicula.3}})</h1>
+                <p><strong>Director: </strong>{{pelicula.8}}</p>
+                <p><strong>Run Time: </strong>{{pelicula.10}}</p>
+                <p><strong>Realease Year: </strong>{{pelicula.3}}</p>
+                <p><strong>IMDB Rating: </strong>{{pelicula.5}}</p>
+                <p><strong>Rated: </strong>{{pelicula.9}}</p>
+                <p><strong>Genre: </strong>{{pelicula.4}}</p>
+                <p class="text-center text-md-start">{{pelicula.7}}</p>
+            </div>
+            <div class="col">
+                {% if pelicula.6 %}
+                    <h2 class="h5 text-center mb-3">TRAILER</h2>
+                    <div class="ratio ratio-21x9">
+                        <iframe src="{{pelicula.6}}" title="YouTube video"></iframe>
+                    </div>
+                {% endif %}
+                <a href="{{pelicula.11}}" class="btn btn-dark d-block mt-3">Magnet Link 720p</a>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    

@@ -1,0 +1,8 @@
+html, body{
+    background-color: #1A2238;
+}
+.form-login{
+    background-color: #fcd965;
+    border-radius: 10px;
+    border: 1px solid #2c3d53;
+}

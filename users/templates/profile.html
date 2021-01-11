@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-8 offset-md-2">
+                {% with messages = get_flashed_messages() %}
+                
+                {% if messages %}
+                
+                {% for message in messages %}
+                <div class="alert alert-success mt-3 text-center">{{message}}</div>
+                {% endfor %}
+                
+                {% endif %}
+                
+                {% endwith %}
+                <h2 class="profile-title">Profile page</h2>
+                <div class="user-details">
+                    <p>Your account details below:</p>
+                    <p><strong>Username: </strong>{{user.1}}</p>
+                    <p><strong>Password: </strong><input type="password" value="{{user.2}}" disabled></p>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
+    
